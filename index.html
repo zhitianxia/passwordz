@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="根据您的原始密码生成不同的场景下的高强度密码">
+    <meta name="key" content="密之,passwordz,password,密码管理">
+    <meta name="author" content="iaming">
+    <title>密之·passwordz</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <h2>密之(PasswordZ)</h2>
+            <p>根据原始密码生成不同场景下的高强度密码。算法开源，不会丢失；本地计算，不会泄露。</p>
+        </div>
+
+        <form>
+            <div class="mb-3">
+                <label for="originPassword" class="form-label">原始密码</label>
+                <input type="password" class="form-control" id="originPassword">
+            </div>
+            <div class="mb-3">
+                <label for="sceneCode" class="form-label">场景代码</label>
+                <input type="email" class="form-control" id="sceneCode" aria-describedby="sceneCodeHelp">
+                <div id="sceneCodeHelp" class="form-text">场景或用途区分，方便您记忆关联</div>
+            </div>
+            <div class="mb-3 row">
+                <div class="col-auto form-check form-switch">
+                    <input type="checkbox" disabled checked=true class="form-check-input" role="switch" id="digitalCheck">
+                    <label class="form-check-label" for="digitalCheck">数字</label>
+                </div>
+                <div class="col-auto form-check form-switch">
+                    <input type="checkbox" class="form-check-input" role="switch" id="lowerCheck">
+                    <label class="form-check-label" for="lowerCheck">小写字母</label>
+                </div>
+                <div class="col-auto form-check form-switch">
+                    <input type="checkbox" class="form-check-input" role="switch" id="upperCheck">
+                    <label class="form-check-label" for="upperCheck">大写字母</label>
+                </div>
+                <div class="col-auto form-check form-switch">
+                    <input type="checkbox" class="form-check-input" role="switch" id="punctuationCheck">
+                    <label class="form-check-label" for="punctuationCheck">符号</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="row">
+                    <button class="btn btn-primary" type="button" id="btn_generate">生成</button>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="code">加密密码/分发密码</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="code" value="">
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary" type="button" id="btn_copy" data-clipboard-target="#code">复制</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2023 PasswordZ & mi.zhitianxia.com <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
+        <!-- <ul class="list-inline">
+          <li class="list-inline-item"><a href="http://www.zhitianxia.com">知天下</a></li>
+          <li class="list-inline-item"><a href="https://liming.pub">技术支持</a></li>
+        </ul> -->
+    </footer>
+</div>
+
+
+<script type="text/javascript" src="js/clipboard.min.js"></script>
+<script type="text/javascript" src="js/md5.min.js"></script>
+<script type="text/javascript" src="js/passwordz.js"></script>
+<script type="text/javascript">
+    var clipboard = new ClipboardJS("#btn_copy");
+    document.getElementById("btn_generate").onclick = function() {
+        var originPassword = document.getElementById("originPassword").value;
+        var sceneCode = document.getElementById("sceneCode").value;
+        var l = document.getElementById("lowerCheck").checked;
+        var u = document.getElementById("upperCheck").checked;
+        var p = document.getElementById("punctuationCheck").checked;
+        var zhi_pwd = generate_password(originPassword, sceneCode, l, u, p);
+        if (zhi_pwd) {
+            document.getElementById("code").value = zhi_pwd;
+        }
+    }
+</script>
+</body>
+</html>
