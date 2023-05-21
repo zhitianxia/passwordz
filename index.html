@@ -6,7 +6,7 @@
     <meta name="description" content="根据您的原始密码生成不同的场景下的高强度密码">
     <meta name="key" content="密之,passwordz,password,密码管理">
     <meta name="author" content="iaming">
-    <title>密之·passwordz</title>
+    <title>密之 PasswordZ</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,7 +14,7 @@
 <div class="container">
     <main>
         <div class="py-5 text-center">
-            <h2>密之(PasswordZ)</h2>
+            <span class="fs-1">密之</span><small>PasswordZ</small>
             <p>根据原始密码生成不同场景下的高强度密码。算法开源，不会丢失；本地计算，不会泄露。</p>
         </div>
 
@@ -29,42 +29,40 @@
                 <div id="sceneCodeHelp" class="form-text">场景或用途区分，方便您记忆关联</div>
             </div>
             <div class="mb-3 row">
-                <div class="col-auto form-check form-switch">
+                <div class="col-auto form-check form-switch ms-3">
                     <input type="checkbox" disabled checked=true class="form-check-input" role="switch" id="digitalCheck">
                     <label class="form-check-label" for="digitalCheck">数字</label>
                 </div>
                 <div class="col-auto form-check form-switch">
-                    <input type="checkbox" class="form-check-input" role="switch" id="lowerCheck">
+                    <input type="checkbox" class="form-check-input" role="switch" id="lowerCheck" checked=true>
                     <label class="form-check-label" for="lowerCheck">小写字母</label>
                 </div>
                 <div class="col-auto form-check form-switch">
-                    <input type="checkbox" class="form-check-input" role="switch" id="upperCheck">
+                    <input type="checkbox" class="form-check-input" role="switch" id="upperCheck" checked=true>
                     <label class="form-check-label" for="upperCheck">大写字母</label>
                 </div>
                 <div class="col-auto form-check form-switch">
-                    <input type="checkbox" class="form-check-input" role="switch" id="punctuationCheck">
+                    <input type="checkbox" class="form-check-input" role="switch" id="punctuationCheck" checked=true>
                     <label class="form-check-label" for="punctuationCheck">符号</label>
                 </div>
             </div>
-            <div class="mb-3">
-                <div class="row">
+            <div class="mb-3 row">
+                <div class="col-sm-12">
                     <button class="btn btn-primary" type="button" id="btn_generate">生成</button>
                 </div>
             </div>
             <div class="mb-3">
-                <label for="code">加密密码/分发密码</label>
+                <label for="code" class="form-label">分发密码</label>
                 <div class="input-group">
-                    <input type="text" class="form-control" id="code" value="">
-                    <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button" id="btn_copy" data-clipboard-target="#code">复制</button>
-                    </div>
+                  <input type="text" class="form-control" id="code" value="" readonly>
+                  <button class="btn btn-outline-secondary" type="button" id="btn_copy" data-clipboard-target="#code">复制</button>
                 </div>
             </div>
         </form>
     </main>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2023 PasswordZ & mi.zhitianxia.com <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
+        <p class="mb-1">&copy; 2023 <a class="link-secondary" href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
         <!-- <ul class="list-inline">
           <li class="list-inline-item"><a href="http://www.zhitianxia.com">知天下</a></li>
           <li class="list-inline-item"><a href="https://liming.pub">技术支持</a></li>
@@ -87,7 +85,11 @@
         var zhi_pwd = generate_password(originPassword, sceneCode, l, u, p);
         if (zhi_pwd) {
             document.getElementById("code").value = zhi_pwd;
+            document.getElementById("btn_copy").innerHTML="复制";
         }
+    }
+    document.getElementById("btn_copy").onclick = function() {
+        document.getElementById("btn_copy").innerHTML="已复制";
     }
 </script>
 </body>

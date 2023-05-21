@@ -10,6 +10,34 @@
 . 本地计算，不会泄露
 . 可自定义密码规则
 
+== 使用说明
+. 原始密码：你需要记住的密码
+. 场景代码：密码场景或用途特征，用来区分或生成不同的分发密码
+. 包含字符：该场景下的密码可以使用的字符
+
+.密之示例
+|===
+|原始密码|场景代码|可以使用的字符|分发密码|说明
+
+|111111|mi.zhitianxia.com|全部|e7?Ug?Mlrjo0ME.W|密之网的密码
+|111111|qq|全部|meh,NyBP6DRUga?r|qq应用的密码
+|111111|公司wifi|数字及字母|Y8XanFkjtGuamy6O|公司wifi网的密码
+|111111|icbc|纯数字|8024153261987848|工行卡的密码
+
+|===
+
+.逃逸示例
+|===
+|原始密码|场景代码|原分发密码（逃逸）|分发密码
+
+|111111|4|;x~VVmTq;TA(bAin|5;x~VVmTq;TA(bAi
+|111111|11|rOb.LUp)xj%srZ,D|7rOb.LUp)xj%srZ,
+|111111|as|iTgFF:C&;F^Updfb|5iTgFF:C&;F^Updf
+|111111|ww|VWH!mz&B#sPGw!bu|2VWH!mz&B#sPGw!b
+|111111|mmmmmmm|OKtC)g)jTrE%^(lw|0OKtC)g)jTrE%^(l
+|777|7777|$R;xXxnrauTlkH)P|5$R;xXxnrauTlkH)
+|===
+
 == 同类比较
 
 本软件受 花密(https://flowerpassword.com/) 启发，所以和花密是属于同一类型的解决方案，本软件加密算法与花密不同，主要表现在：
@@ -25,6 +53,6 @@
 
 == 开发计划
 
-* [x] 在线版本，支持手机 http://mi.zhitianxia.com
+* [x] 在线版本，支持PC及手机访问： http://mi.zhitianxia.com
 * [ ] windows/macOS/linux命令行版本
 * [ ] windows/macOS/linux客户端版本
