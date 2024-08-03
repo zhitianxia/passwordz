@@ -1,0 +1,4 @@
+79bc770bf341df2b14589651deeedfd2  passwordz-1.0.0-android-arm64.tar.gz
+31ec70c12868afa95fb12fa843727335  passwordz-1.0.0-darwin-amd64.tar.gz
+9601c0223ba52c01c56458e0003eef42  passwordz-1.0.0-linux-amd64.tar.gz
+dbd9f242a66d1ad7bd7e72b8094a085e  passwordz-1.0.0-windows-amd64.zip
