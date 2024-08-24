@@ -8,14 +8,14 @@
     <meta name="author" content="iaming">
     <title>密之 PasswordZ 介绍</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="icon" type="image/png" href="image/icon.png">
 </head>
 <body>
 
 <div class="container">
     <main>
         <div class="py-5 text-center">
-            <a href="http://mi.zhitianxia.com"><img src="passwordz.png" height="85px" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
+            <a href="http://mi.zhitianxia.com"><img src="image/passwordz.png" height="85px" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
             <big>关于 密之</big> · <small>PasswordZ</small>
         </div>
     </main>
@@ -29,20 +29,50 @@
         <li>密码规则不一样？网站A要求必须包含字母数字字符，网站B不能用字符，网站C只能8位数字。不记住规则只能一次次找回，然后一次次忘记！</li>
         <li>密码管理工具？没带电脑，临时借用别人的设备，没法使用密码管理工具怎么办？</li>
     </ul>
-    <p class="lead">
-        密之通过如下几方面来解决上述问题： 
+    <h4>密之解决方案</h4>
+    <p></p>
+    <h5>
+        记住一个原始密码，即可拥有无数独立的分发密码
+    </h5>
+    <p>
+        使用原始密码和不同场景来生成不同的分发密码，只需要记住一个原始密码，借助密之就相当于每个网站、APP、银行卡等都有一个独立毫无关联的密码
     </p>
-    <ul>
-        <li>使用原始密码根据不同场景来生成不同的分发密码，只需要记住一个原始密码，借助密之就相当于每个网站、APP、银行卡等都有一个独立毫无关联的密码</li>
-        <li>单向不可逆，即使泄露了某一个网站的密码，也无法根据该密码反向算出原始密码</li>
-        <li>使用16位数字大小写字母特殊字符的组合来提高密码强度</li>
-        <li>适配不同站点的不同密码规则</li>
-        <li>本地计算，计算时无网络交互</li>
-        <li>不存储，本地和服务端均不会存储密码，从根本上杜绝了密码自泄露可能</li>
-        <li>随时随地使用</li>
-        <li>密码算法开源</li>
-    </ul>
+    <h5>
+        密码生成算法单向不可逆
+    </h5>
+    <p>
+        密码生成算法不可逆，同时叠加场景代码和密码字符组合加密因子，即使泄露了某一个网站的密码，也无法根据该密码反向算出原始密码。
+    </p>
+    <h5>高强度密码</h5>
+    <p>
+       使用16位数字大小写字母特殊字符的组合来提高密码强度 
+    </p>
+    <h5>适配不同站点的不同密码规则</h5>
+    <p>
+        可自定义密码规则，可以根据自身安全要求和场景密码要求生成密码
+    </p>
+    <h5>随时随地高可用</h5>
+    <p>
+        提供各种操作系统发行版本、浏览器插件、在线服务等，所有终端至少存在两种以上可用的程序，真正做到随时随地随便某个终端均可使用。
+    </p>
 
+    <hr />
+    <h3>把密码交给密之管理，是否放心?</h3>
+    <p></p>
+    <h5>无痕使用，无状态无会话不存储，不会被泄露</h5>
+    <p>
+        密之无状态无会话，无服务端存储，亦无本地存储，使用密之不会在本地或网络留下任何痕迹，从根源上杜绝了密码泄露问题。
+    </p>
+    <h5>本地计算，不会被窃取</h5>
+    <p>
+        密之完全采用本地计算（在线版使用浏览器计算），计算期间不访问本地磁盘，不访问网络，不存在密码被第三方窃取的可能。
+    </p>
+    <h5>算法开源，不会丢失</h5>
+    <p>
+        密之自身算法开源，底层加密算法也是采用开源算法，并且官方提供了在线版、离线版、浏览器插件版等各种类型软件，不存在无法使用或者丢失密码算法的情况。
+    </p>
+
+    <hr />
     <h3>如何使用?</h3>
     <ul>
         <li><span class="lead">访问<a href="http://mi.zhitianxia.com">在线版</a> </span> <small> 支持电脑、手机、平板。打开浏览器输入密之天下网址即可：http://mi.zhitianxia.com</small></li>
@@ -52,7 +82,11 @@
     </ul>
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1"><a href="about.html">关于密之</a> &copy; 2023-2024 <a class="link-secondary" href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
+        <ul class="list-inline">
+            <li class="list-inline-item">简体中文</li>
+            <li class="list-inline-item"><a href="en/about.html">English</a></li>
+        </ul>
+        <p class="mb-1">&copy; 2023-2024 <a class="link-secondary" href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
         <!-- <ul class="list-inline">
           <li class="list-inline-item"><a href="http://www.zhitianxia.com">知天下</a></li>
           <li class="list-inline-item"><a href="https://liming.pub">技术支持</a></li>

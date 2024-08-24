@@ -1,12 +1,13 @@
 <!doctype html>
-<html lang="zh-CN" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="根据您的原始密码生成不同的场景下的高强度密码，离线版程序下载">
+    <meta name="description" content="Generate strong passwords in different scenarios based on the original password,offline version download">
     <meta name="key" content="密之,passwordz,password,密码管理,密码">
     <meta name="author" content="iaming">
-    <title>密之 PasswordZ 下载</title>
+    <title>密之 PasswordZ Download</title>
+    <base href="../" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="image/icon.png">
 </head>
@@ -15,28 +16,28 @@
 <div class="container">
     <main>
         <div class="py-5 text-center">
-            <a href="http://mi.zhitianxia.com"><img src="image/passwordz.png" height="85px" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
+            <a href="http://mi.zhitianxia.com/en/"><img src="image/passwordz.png" height="85px" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
             <big>密之</big> · <small>PasswordZ</small>
-            <p>根据原始密码生成不同场景下的高强度密码。算法开源，不会丢失；本地计算，不会泄露。</p>
-            <p><a href="http://mi.zhitianxia.com">在线版</a>无需下载随时随地使用。</a></p>
+            <p>Generate strong passwords in different scenarios based on the original password.</p>
+            <p>Visit the <a href="http://mi.zhitianxia.com/en/">online version</a>,No need to download and use anytime, anywhere.</a></p>
         </div>
     </main>
 
     <div>
-      <h3>密之 浏览器扩展程序</h3>
+      <h3>Browser Extensions of PasswordZ</h3>
       <p>
-        如果您正在使用Microsoft Edge，从<a target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/mdnekbopjnnjdhelbammgngakefjpjhm">Microsoft Edge官方市场</a> 直接获取PassowordZ扩展即可。
+        If you're using Microsoft Edge,just get the PassowordZ extension directly from the <a target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/mdnekbopjnnjdhelbammgngakefjpjhm">official Microsoft Edge marketplace</a>.
       </p>
     </div>
     <div>
-      <h3>密之 离线版命令行程序</h3>
-      <table class="table">
+    <h3>Offline command-line version of PasswordZ</h3>
+    <table class="table">
         <thead>
           <tr>
-            <th scope="col">系统</th>
-            <th scope="col">下载连接</th>
-            <th scope="col">大小</th>
-            <th scope="col">MD5校验码</th>
+            <th scope="col">OS</th>
+            <th scope="col">File Link</th>
+            <th scope="col">Size</th>
+            <th scope="col">MD5</th>
           </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -69,16 +70,16 @@
     </div>
     
     <div class="my-3 pt-3 text-muted text-small">
-        <h5>Windows安装说明</h5>
-        <a href="download/passwordz-1.0.0-windows-amd64.zip">下载</a>解压后，进入该程序所在目录（如果设置一下环境变量，则可以任意目录），ctrl+右键选择在此处打开PowerShell窗口，然后输入如下命令使用密之：
+        <h5>Windows Installation instructions</h5>
+        <a href="download/passwordz-1.0.0-windows-amd64.zip">Download</a> and decompression, go to the directory where the program is located (if you set the PATH variables, you can arbitrary the directory), ctrl+right-click to open the PowerShell window here, and then enter the following command to use PasswordZ:
         <pre>
             <code>
 ./passwordz.exe 
             </code>
         </pre>
 
-        <h5>Mac安装说明</h5>
-        <a href="download/passwordz-1.0.0-darwin-amd64.tar.gz">下载</a>解压后，使用命令行进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置）输入 <samp>passwordz</samp> 命令使用密之。如果弹出：无法打开“passwordz”，因为无法验证开发者。点击取消，然后进入 系统偏好设置 -> 安全性与隐私 -> 通用 -> 在 运行从以下位置下载的APP：已阻止使用”passwordz“，因为来自身份不明的开发者 区域。 点击 仍然运行 后即可。
+        <h5>MacOS Installation instructions</h5>
+        <a href="download/passwordz-1.0.0-darwin-amd64.tar.gz">Download</a> and decompression,Use the command line to go to the directory where the program is located (put passwordz in the $PATH directory to get anywhere on the command line), and type the <samp>passwordz</samp> command to use PasswordZ.If it pops up: "passwordz" cannot be opened because the developer cannot be verified. Click Cancel, then go to System Preferences -> Security & Privacy -> General -> in the Running apps downloaded from: The use of "passwordz" has been blocked because it comes from an unidentified developer area. Click Still Running and that's it.
         <pre>
             <code>
 curl -O http://mi.zhitianxia.com/download/passwordz-1.0.0-darwin-amd64.tar.gz
@@ -86,8 +87,8 @@ tar -xzf passwordz-1.0.0-darwin-amd64.tar.gz
 mv passwordz /usr/local/bin/passwordz
             </code>
         </pre>
-        <h5>Linux安装说明</h5>
-        <a href="download/passwordz-1.0.0-linux-amd64.tar.gz">下载</a>解压后，使用命令行进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置）输入 <samp>passwordz</samp> 命令使用密之
+        <h5>Linux Installation instructions</h5>
+        <a href="download/passwordz-1.0.0-linux-amd64.tar.gz">Download</a> and decompression,Use the command line to go to the directory where the program is located (put passwordz in the $PATH directory to get anywhere on the command line), and type the <samp>passwordz</samp> command to use PasswordZ.
             <pre>
                 <code>
 curl -O http://mi.zhitianxia.com/download/passwordz-1.0.0-linux-amd64.tar.gz
@@ -95,8 +96,8 @@ tar -xzf passwordz-1.0.0-linux-amd64.tar.gz
 sudo mv passwordz /usr/local/bin/passwordz
                 </code>
             </pre>
-        <h5>Android版安装说明</h5>
-        注意该程序为命令行程序，需要使用命令行或者Termux，在命令行<a href="download/passwordz-1.0.0-android-arm64.tar.gz">下载</a>解压后，进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置），输入 <samp>passwordz</samp> 命令使用密之
+        <h5>Android Installation instructions</h5>
+        Note that this program is a command-line program, you need to use the command line or Termux, open the terminal，<a href="download/passwordz-1.0.0-android-arm64.tar.gz">download</a> and decompression,Use the command line to go to the directory where the program is located (put passwordz in the $PATH directory to get anywhere on the command line), and type the <samp>passwordz</samp> command to use PasswordZ.
         <pre>
             <code>
 curl -O http://mi.zhitianxia.com/download/passwordz-1.0.0-android-arm64.tar.gz
@@ -106,7 +107,7 @@ mv passwordz ${PATH##*:}
         </pre>
     </div>
     <div class="my-3 pt-3 text-muted text-small">
-        <h5>密之命令行交互示例</h5>
+        <h5>Example of a PasswordZ command-line interaction</h5>
         <pre>
             <code>
 ➜  ~ passwordz
@@ -128,10 +129,10 @@ p:符号(punctuation)
 
     <footer class="my-5 pt-5 text-muted text-center text-small">
       <ul class="list-inline">
-        <li class="list-inline-item">简体中文</li>
-        <li class="list-inline-item"><a href="en/download.html">English</a></li>
-      </ul>
-        <p class="mb-1"><a href="about.html">关于密之</a> &copy; 2023-2024 <a class="link-secondary" href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
+        <li class="list-inline-item"><a href="download.html">简体中文</a></li>
+        <li class="list-inline-item">English</li>
+    </ul>
+        <p class="mb-1"><a href="en/about.html">About PasswordZ</a> &copy; 2023-2024 <a class="link-secondary" href="http://mi.zhitianxia.com/en/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
         <!-- <ul class="list-inline">
           <li class="list-inline-item"><a href="http://www.zhitianxia.com">知天下</a></li>
           <li class="list-inline-item"><a href="https://liming.pub">技术支持</a></li>
