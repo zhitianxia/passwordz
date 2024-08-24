@@ -64,5 +64,6 @@
 
 * [x] 在线版本，支持PC及手机访问： http://mi.zhitianxia.com
 * [x] windows/macOS/linux命令行版本
+* [x] 浏览器插件版本
 * [ ] windows/macOS/linux客户端版本
 * [ ] 支持自定义加密因子
