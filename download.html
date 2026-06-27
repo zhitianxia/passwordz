@@ -35,73 +35,40 @@
           <tr>
             <th scope="col">系统</th>
             <th scope="col">下载连接</th>
-            <th scope="col">大小</th>
             <th scope="col">MD5校验码</th>
           </tr>
         </thead>
-        <tbody class="table-group-divider">
-          <tr>
-            <th scope="row">Windows</th>
-            <td><a href="download/passwordz-1.0.0-windows-amd64.zip">passwordz-1.0.0-windows-amd64.zip</a></td>
-            <td>704KB</td>
-            <td>dbd9f242a66d1ad7bd7e72b8094a085e</td>
-          </tr>
-          <tr>
-            <th scope="row">MacOS</th>
-            <td><a href="download/passwordz-1.0.0-darwin-amd64.tar.gz">passwordz-1.0.0-darwin-amd64.tar.gz</a></td>
-            <td>672KB</td>
-            <td>31ec70c12868afa95fb12fa843727335</td>
-          </tr>
-          <tr>
-            <th scope="row">Linux</th>
-            <td><a href="download/passwordz-1.0.0-linux-amd64.tar.gz">passwordz-1.0.0-linux-amd64.tar.gz</a></td>
-            <td>624KB</td>
-            <td>9601c0223ba52c01c56458e0003eef42</td>
-          </tr>
-          <tr>
-            <th scope="row">Android</th>
-            <td><a href="download/passwordz-1.0.0-android-arm64.tar.gz">passwordz-1.0.0-android-arm64.tar.gz</a></td>
-            <td>616KB</td>
-            <td>79bc770bf341df2b14589651deeedfd2</td>
-          </tr>
-        </tbody>
+        <tbody id="download-table"></tbody>
       </table>
+      <div id="history"></div>
+      <p class="text-muted small">注意：v1.1.0 修复了符号兜底的一个缺陷，与 v1.0.0 在约 2.55% 的「数字+小写+大写+符号」全开场景下生成的密码不同；如需回退旧版本，请确认对应账户的密码。</p>
     </div>
-    
+
     <div class="my-3 pt-3 text-muted text-small">
         <h5>Windows安装说明</h5>
-        <a href="download/passwordz-1.0.0-windows-amd64.zip">下载</a>解压后，进入该程序所在目录（如果设置一下环境变量，则可以任意目录），ctrl+右键选择在此处打开PowerShell窗口，然后输入如下命令使用密之：
+        <a data-file="windows" href="download/">下载</a>解压后，进入该程序所在目录（如果设置一下环境变量，则可以任意目录），ctrl+右键选择在此处打开PowerShell窗口，然后输入如下命令使用密之：
         <pre>
             <code>
-./passwordz.exe 
+./passwordz.exe
             </code>
         </pre>
 
         <h5>Mac安装说明</h5>
-        <a href="download/passwordz-1.0.0-darwin-amd64.tar.gz">下载</a>解压后，使用命令行进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置）输入 <samp>passwordz</samp> 命令使用密之。如果弹出：无法打开“passwordz”，因为无法验证开发者。点击取消，然后进入 系统偏好设置 -> 安全性与隐私 -> 通用 -> 在 运行从以下位置下载的APP：已阻止使用”passwordz“，因为来自身份不明的开发者 区域。 点击 仍然运行 后即可。
+        <a data-file="darwin" href="download/">下载</a>解压后，使用命令行进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置）输入 <samp>passwordz</samp> 命令使用密之。如果弹出：无法打开“passwordz”，因为无法验证开发者。点击取消，然后进入 系统偏好设置 -> 安全性与隐私 -> 通用 -> 在 运行从以下位置下载的APP：已阻止使用”passwordz“，因为来自身份不明的开发者 区域。 点击 仍然运行 后即可。
         <pre>
-            <code>
-curl -O http://mi.zhitianxia.com/download/passwordz-1.0.0-darwin-amd64.tar.gz
-tar -xzf passwordz-1.0.0-darwin-amd64.tar.gz
-mv passwordz /usr/local/bin/passwordz
+            <code data-curl="darwin">
             </code>
         </pre>
         <h5>Linux安装说明</h5>
-        <a href="download/passwordz-1.0.0-linux-amd64.tar.gz">下载</a>解压后，使用命令行进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置）输入 <samp>passwordz</samp> 命令使用密之
+        <a data-file="linux" href="download/">下载</a>解压后，使用命令行进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置）输入 <samp>passwordz</samp> 命令使用密之
             <pre>
-                <code>
-curl -O http://mi.zhitianxia.com/download/passwordz-1.0.0-linux-amd64.tar.gz
-tar -xzf passwordz-1.0.0-linux-amd64.tar.gz
-sudo mv passwordz /usr/local/bin/passwordz
+                <code data-curl="linux">
                 </code>
             </pre>
         <h5>Android版安装说明</h5>
-        注意该程序为命令行程序，需要使用命令行或者Termux，在命令行<a href="download/passwordz-1.0.0-android-arm64.tar.gz">下载</a>解压后，进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置），输入 <samp>passwordz</samp> 命令使用密之
+        注意该程序为命令行程序，需要使用命令行或者Termux，在命令行<a data-file="android" href="download/">下载</a>解压后，进入该程序所在目录（将passwordz放到$PATH目录的话就可以在任意命令行程序位置），输入 <samp>passwordz</samp> 命令使用密之
         <pre>
-            <code>
-curl -O http://mi.zhitianxia.com/download/passwordz-1.0.0-android-arm64.tar.gz
-tar -xzf passwordz-1.0.0-android-arm64.tar.gz
-mv passwordz ${PATH##*:}
+            <code data-curl="android">
             </code>
         </pre>
     </div>
@@ -110,7 +77,7 @@ mv passwordz ${PATH##*:}
         <pre>
             <code>
 ➜  ~ passwordz
-密之v1.0.0 © http://mi.zhitianxia.com
+密之v<span data-version></span> © http://mi.zhitianxia.com
 请输入原始密码(origin password):******
 请输入场景代码(scene code): icbc
 ==============
@@ -132,19 +99,18 @@ p:符号(punctuation)
         <li class="list-inline-item"><a href="en/download.html">English</a></li>
       </ul>
         <p class="mb-1"><a href="about.html">关于密之</a> &copy; 2023-2024 <a class="link-secondary" href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
-        <!-- <ul class="list-inline">
-          <li class="list-inline-item"><a href="http://www.zhitianxia.com">知天下</a></li>
-          <li class="list-inline-item"><a href="https://liming.pub">技术支持</a></li>
-        </ul> -->
     </footer>
 </div>
 
+<noscript><p class="text-center text-danger">下载列表需要启用 JavaScript 才能显示。</p></noscript>
+
+<script type="text/javascript" src="js/downloads.js"></script>
 <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?05af346252961380425c23d4f5b8ebfa";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
 </script>
