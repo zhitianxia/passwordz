@@ -8,7 +8,9 @@
     <meta name="author" content="iaming">
     <title>密之 PasswordZ</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg">
     <link rel="icon" type="image/png" href="../image/icon.png">
+<style>.li{width:14px;height:14px;vertical-align:-2px;margin-right:5px;opacity:.85}</style>
 </head>
 <body>
 
@@ -25,11 +27,11 @@
 
         <form>
             <div class="mb-3">
-                <label for="originPassword" class="form-label">origin password</label>
+                <label for="originPassword" class="form-label"><svg class="li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>origin password</label>
                 <input type="password" class="form-control" id="originPassword">
             </div>
             <div class="mb-3">
-                <label for="sceneCode" class="form-label">scene code</label>
+                <label for="sceneCode" class="form-label"><svg class="li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></svg>scene code</label>
                 <input type="email" class="form-control" id="sceneCode" aria-describedby="sceneCodeHelp">
                 <div id="sceneCodeHelp" class="form-text">scenes or uses, so that you can easily remember the association</div>
             </div>
@@ -57,10 +59,10 @@
                 </div>
             </div>
             <div class="mb-3">
-                <label for="code" class="form-label">password</label>
+                <label for="code" class="form-label"><svg class="li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="15" r="4"/><path d="m10 12 8-8M16 6l2 2M13 9l2 2"/></svg>password</label>
                 <div class="input-group">
                   <input type="text" class="form-control" id="code" value="" readonly>
-                  <button class="btn btn-outline-secondary" type="button" id="btn_copy" data-clipboard-target="#code">copy</button>
+                  <button class="btn btn-outline-secondary" type="button" id="btn_copy" data-clipboard-target="#code"><svg class="li" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span id="copyText">copy</span></button>
                 </div>
             </div>
         </form>

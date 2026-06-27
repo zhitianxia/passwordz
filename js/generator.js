@@ -9,17 +9,10 @@ document.getElementById("btn_generate").onclick = function() {
     var zhi_pwd = generate_password(originPassword, sceneCode, l, u, p);
     if (zhi_pwd) {
         document.getElementById("code").value = zhi_pwd;
-        if (langValue == "en"){
-            document.getElementById("btn_copy").innerHTML="copy";
-        }else{
-            document.getElementById("btn_copy").innerHTML="复制";
-        }
+        // 只切文字 span，保留复制图标
+        document.getElementById("copyText").textContent = (langValue == "en") ? "copy" : "复制";
     }
 }
 document.getElementById("btn_copy").onclick = function() {
-    if (langValue == "en"){
-        document.getElementById("btn_copy").innerHTML="copied";
-    }else{
-        document.getElementById("btn_copy").innerHTML="已复制";
-    }
-}   
+    document.getElementById("copyText").textContent = (langValue == "en") ? "copied" : "已复制";
+}

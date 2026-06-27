@@ -65,5 +65,5 @@
 * [x] 在线版本，支持PC及手机访问： http://mi.zhitianxia.com
 * [x] windows/macOS/linux命令行版本
 * [x] 浏览器插件版本
-* [ ] windows/macOS/linux客户端版本
+* [x] windows/macOS/linux客户端版本（Wails 桌面版；Windows/Linux 已发，macOS 需在 Mac 构建）
 * [ ] 支持自定义加密因子
