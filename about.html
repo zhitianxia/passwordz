@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="根据您的原始密码生成不同的场景下的高强度密码，离线版程序下载">
-    <meta name="key" content="密之,passwordz,password,密码管理,密码">
+    <meta name="description" content="根据您的原始密码生成不同的场景下的高强度密码">
+    <meta name="keywords" content="密之,passwordz,password,密码管理,密码">
     <meta name="author" content="iaming">
     <title>密之 PasswordZ 介绍</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/passwordz.css" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
     <link rel="icon" type="image/png" href="image/icon.png">
 </head>
@@ -15,83 +16,64 @@
 
 <div class="container">
     <main>
-        <div class="py-5 text-center">
-            <a href="http://mi.zhitianxia.com"><img src="image/passwordz.png" height="85px" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
-            <big>关于 密之</big> · <small>PasswordZ</small>
+        <div class="pz-hero">
+            <div class="pz-hero-top">
+                <a href="index.html"><img src="image/passwordz.png" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
+                <div class="pz-brand"><span class="pz-brand-cn">关于</span><span class="pz-brand-sep">·</span><span class="pz-brand-en">PasswordZ</span></div>
+            </div>
+            <p class="pz-slogan">原始密码 + 场景 → 高强度密码。<strong>算法开源，不会丢失；本地计算，不会泄露。</strong></p>
         </div>
     </main>
-    <h3>密之解决什么问题？</h3>
-    <p class="lead">
-        您是否有过如下烦恼?
-    </p>
-    <ul>
-        <li>密码太多记不住？这么多网站、APP、银行卡的密码怎么记住？</li>
-        <li>一个密码走天下？当某个网站密码被泄露后怎么办？所有的网站、app、银行卡都得全部改一遍密码！</li>
-        <li>密码规则不一样？网站A要求必须包含字母数字字符，网站B不能用字符，网站C只能8位数字。不记住规则只能一次次找回，然后一次次忘记！</li>
-        <li>密码管理工具？没带电脑，临时借用别人的设备，没法使用密码管理工具怎么办？</li>
-    </ul>
-    <h4>密之解决方案</h4>
-    <p></p>
-    <h5>
-        记住一个原始密码，即可拥有无数独立的分发密码
-    </h5>
-    <p>
-        使用原始密码和不同场景来生成不同的分发密码，只需要记住一个原始密码，借助密之就相当于每个网站、APP、银行卡等都有一个独立毫无关联的密码
-    </p>
-    <h5>
-        密码生成算法单向不可逆
-    </h5>
-    <p>
-        密码生成算法不可逆，同时叠加场景代码和密码字符组合加密因子，即使泄露了某一个网站的密码，也无法根据该密码反向算出原始密码。
-    </p>
-    <h5>高强度密码</h5>
-    <p>
-       使用16位数字大小写字母特殊字符的组合来提高密码强度 
-    </p>
-    <h5>适配不同站点的不同密码规则</h5>
-    <p>
-        可自定义密码规则，可以根据自身安全要求和场景密码要求生成密码
-    </p>
-    <h5>随时随地高可用</h5>
-    <p>
-        提供各种操作系统发行版本、浏览器插件、在线服务等，所有终端至少存在两种以上可用的程序，真正做到随时随地随便某个终端均可使用。
-    </p>
 
-    <hr />
-    <h3>把密码交给密之管理，是否放心?</h3>
-    <p></p>
-    <h5>无痕使用，无状态无会话不存储，不会被泄露</h5>
-    <p>
-        密之无状态无会话，无服务端存储，亦无本地存储，使用密之不会在本地或网络留下任何痕迹，从根源上杜绝了密码泄露问题。
-    </p>
-    <h5>本地计算，不会被窃取</h5>
-    <p>
-        密之完全采用本地计算（在线版使用浏览器计算），计算期间不访问本地磁盘，不访问网络，不存在密码被第三方窃取的可能。
-    </p>
-    <h5>算法开源，不会丢失</h5>
-    <p>
-        密之自身算法开源，底层加密算法也是采用开源算法，并且官方提供了在线版、离线版、浏览器插件版等各种类型软件，不存在无法使用或者丢失密码算法的情况。
-    </p>
+    <section class="pz-card">
+        <span class="pz-section-tag">问题</span>
+        <h3>密之解决什么问题？</h3>
+        <p class="lead mb-2">您是否有过如下烦恼？</p>
+        <ul class="pz-features">
+            <li>密码太多记不住？这么多网站、APP、银行卡的密码怎么记住？</li>
+            <li>一个密码走天下？当某个网站密码被泄露后怎么办？所有的网站、APP、银行卡都得全部改一遍！</li>
+            <li>密码规则不一样？网站 A 要求必须包含字母数字，网站 B 不能用特殊字符，网站 C 只能 8 位数字。记不住规则只能一次次找回，又一次次忘记！</li>
+            <li>密码管理工具？没带电脑、临时借用别人的设备，没法使用密码管理工具怎么办？</li>
+        </ul>
+        <h4 class="mt-4">密之解决方案</h4>
+        <h5 class="pz-feature-title">记住一个原始密码，即可拥有无数独立的分发密码</h5>
+        <p>使用原始密码与不同场景生成不同的分发密码，只需记住一个原始密码，借助密之，每个网站、APP、银行卡都拥有一个独立、彼此无关的密码。</p>
+        <h5 class="pz-feature-title">密码生成算法单向不可逆</h5>
+        <p>生成算法不可逆，并叠加场景代码与字符组合作为加密因子；即使某个网站的密码泄露，也无法据此反算出原始密码。</p>
+        <h5 class="pz-feature-title">高强度密码</h5>
+        <p>使用 16 位数字、大小写字母、特殊字符的组合，显著提升密码强度。</p>
+        <h5 class="pz-feature-title">适配不同站点的密码规则</h5>
+        <p>可自定义字符组合，根据自身安全要求与站点密码规则灵活生成。</p>
+        <h5 class="pz-feature-title">随时随地高可用</h5>
+        <p>提供各操作系统发行版、浏览器扩展与在线服务，任意终端至少有两种以上可用方式，真正做到随时随地皆可使用。</p>
+    </section>
 
-    <hr />
-    <h3>如何使用?</h3>
-    <ul>
-        <li><span class="lead">访问<a href="http://mi.zhitianxia.com">在线版</a> </span> <small> 支持电脑、手机、平板。打开浏览器输入密之天下网址即可：http://mi.zhitianxia.com</small></li>
-        <li>
-            <span class="lead">下载<a href="http://mi.zhitianxia.com/download.html">离线版</a> </span><small> 支持Windows、Mac、Linux、Android</small>
-        </li>
-    </ul>
+    <section class="pz-card">
+        <span class="pz-section-tag">安全</span>
+        <h3>把密码交给密之管理，是否放心？</h3>
+        <h5 class="pz-feature-title">无痕使用，无状态无会话不存储，不会被泄露</h5>
+        <p>密之无状态、无会话，无服务端存储，亦无本地存储；使用密之不会在本地或网络留下任何痕迹，从根源杜绝密码泄露。</p>
+        <h5 class="pz-feature-title">本地计算，不会被窃取</h5>
+        <p>密之完全采用本地计算（在线版在浏览器内计算），计算期间不访问本地磁盘、不访问网络，不存在被第三方窃取的可能。</p>
+        <h5 class="pz-feature-title">算法开源，不会丢失</h5>
+        <p>密之算法开源，底层加密亦采用开源算法；官方提供在线版、离线版、浏览器扩展等多种形态，不存在无法使用或丢失算法的情况。</p>
+    </section>
 
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-        <ul class="list-inline">
-            <li class="list-inline-item">简体中文</li>
+    <section class="pz-card">
+        <span class="pz-section-tag">使用</span>
+        <h3>如何使用？</h3>
+        <ul class="pz-features">
+            <li><span class="lead">访问<a href="index.html">在线版</a></span><br><small class="text-muted">支持电脑、手机、平板，打开浏览器访问密之即可。</small></li>
+            <li><span class="lead">下载<a href="download.html">离线版</a></span><br><small class="text-muted">支持 Windows、Mac、Linux、Android。</small></li>
+        </ul>
+    </section>
+
+    <footer class="my-4 pt-3 text-center pz-footer">
+        <ul class="list-inline pz-lang">
+            <li class="list-inline-item active">简体中文</li>
             <li class="list-inline-item"><a href="en/about.html">English</a></li>
         </ul>
-        <p class="mb-1">&copy; 2023-2024 <a class="link-secondary" href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
-        <!-- <ul class="list-inline">
-          <li class="list-inline-item"><a href="http://www.zhitianxia.com">知天下</a></li>
-          <li class="list-inline-item"><a href="https://liming.pub">技术支持</a></li>
-        </ul> -->
+        <p class="mb-1"><a href="index.html">返回首页</a> &copy; 2023-2026 <a href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a> · <a href="http://www.fangmou.com">方谋</a></p>
     </footer>
 </div>
 
@@ -100,7 +82,7 @@
     (function() {
       var hm = document.createElement("script");
       hm.src = "https://hm.baidu.com/hm.js?05af346252961380425c23d4f5b8ebfa";
-      var s = document.getElementsByTagName("script")[0]; 
+      var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
 </script>

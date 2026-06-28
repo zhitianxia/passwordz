@@ -7,7 +7,10 @@
 (function () {
     "use strict";
 
-    var MD5_URL = "download/md5sum.txt";
+    // 该脚本被 download.html（站点根）与 en/download.html（en/ 子目录）共享；
+    // 子目录页的下载根需多回退一层，按当前路径决定前缀（取代 en/download.html 的 <base>）。
+    var DL = /\/en\//.test(location.pathname) ? "../download/" : "download/";
+    var MD5_URL = DL + "md5sum.txt";
     var PLATFORM_LABEL = { windows: "Windows", darwin: "MacOS", linux: "Linux", android: "Android" };
     var PLATFORM_ORDER = ["windows", "darwin", "linux", "android"];
     // 面向用户文案（中英共用本文件，按 <html lang> 选择）
@@ -87,7 +90,7 @@
         return group.entries.filter(function (e) { return e.kind === kind; }).map(function (e) {
             return '<tr><th scope="row">' + PLATFORM_LABEL[e.platform] +
                 ' <small class="text-muted">(' + esc(e.arch) + ')</small></th>' +
-                '<td><a href="download/' + encodeURIComponent(e.file) + '">' + esc(e.file) + '</a></td>' +
+                '<td><a href="' + DL + encodeURIComponent(e.file) + '">' + esc(e.file) + '</a></td>' +
                 '<td><code>' + esc(e.md5) + '</code></td></tr>';
         }).join("");
     }
@@ -98,7 +101,7 @@
             var lis = rel.entries.map(function (e) {
                 var tag = e.kind === "desktop" ? ' <span class="badge bg-secondary">' + i18n.desktopTag + '</span>' : '';
                 return '<li>' + PLATFORM_LABEL[e.platform] + ' (' + esc(e.arch) + ')' + tag +
-                    ' &mdash; <a href="download/' + encodeURIComponent(e.file) + '">' + esc(e.file) + '</a>' +
+                    ' &mdash; <a href="' + DL + encodeURIComponent(e.file) + '">' + esc(e.file) + '</a>' +
                     ' (md5: <code>' + esc(e.md5) + '</code>)</li>';
             }).join("");
             return '<h5 class="mt-3">' + i18n.historyTitle + ' v' + esc(rel.version) + '</h5><ul class="small">' + lis + '</ul>';
@@ -113,7 +116,7 @@
         });
         Array.prototype.forEach.call(document.querySelectorAll("[data-file]"), function (el) {
             var e = byPlatform[el.getAttribute("data-file")];
-            if (e) el.setAttribute("href", "download/" + e.file);
+            if (e) el.setAttribute("href", DL + e.file);
         });
         Array.prototype.forEach.call(document.querySelectorAll("[data-curl]"), function (el) {
             var p = el.getAttribute("data-curl");

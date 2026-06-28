@@ -1,3 +1,7 @@
+// 符号集：算法（password_z）与强度估算（generator.js charsetSize）共用此单一来源，
+// 避免两处重复定义导致改字符集时漏改。网站 / 扩展 / Go 三端的 punctuation 须保持一致。
+var PZ_PUNCTUATION = "~!@#$%^&*():;,.?";
+
 function zhi_hash(pwd, key) {
 	return md5(md5(md5(pwd, key),"mi"), "zhi") + md5(md5(md5(pwd, key),"tian"), "xia");
 }
@@ -7,7 +11,7 @@ function password_z(pwd, key, d, l, u, p){
 	var digit = "0123456789";
 	var lower = "abcdefghijklmnopqrstuvwxyz";
 	var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	var punctuation = "~!@#$%^&*():;,.?";
+	var punctuation = PZ_PUNCTUATION;
 	var chars = "";
 	if(d){
 		chars = chars + digit;

@@ -3,97 +3,82 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Generate strong passwords in different scenarios based on the original password,offline version download">
-    <meta name="key" content="密之,passwordz,password,密码管理,密码">
+    <meta name="description" content="Generate strong passwords in different scenarios based on the original password, offline version download">
+    <meta name="keywords" content="passwordz,password,password manager,password generator">
     <meta name="author" content="iaming">
     <title>密之 PasswordZ Download</title>
-    <base href="../" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="image/favicon.svg">
-    <link rel="icon" type="image/png" href="image/icon.png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/passwordz.css" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../image/favicon.svg">
+    <link rel="icon" type="image/png" href="../image/icon.png">
 </head>
 <body>
 
 <div class="container">
     <main>
-        <div class="py-5 text-center">
-            <a href="http://mi.zhitianxia.com/en/"><img src="image/passwordz.png" height="85px" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
-            <big>密之</big> · <small>PasswordZ</small>
-            <p>Generate strong passwords in different scenarios based on the original password.</p>
-            <p>Visit the <a href="http://mi.zhitianxia.com/en/">online version</a>,No need to download and use anytime, anywhere.</a></p>
+        <div class="pz-hero">
+            <div class="pz-hero-top">
+                <a href="index.html"><img src="../image/passwordz.png" alt="密之 PasswordZ" title="密之 PasswordZ" /></a>
+                <div class="pz-brand"><span class="pz-brand-cn">Download</span><span class="pz-brand-sep">·</span><span class="pz-brand-en">PasswordZ</span></div>
+            </div>
+            <p class="pz-slogan">Original password + scene → a strong password. <strong>Open algorithm, never lost; computed locally, never leaked.</strong></p>
+            <p class="pz-hero-links"><a href="index.html">Online version</a> — no download, use anywhere</p>
         </div>
     </main>
 
-    <div>
-      <h3>Browser Extensions of PasswordZ</h3>
-      <p>
-        If you're using Microsoft Edge,just get the PassowordZ extension directly from the <a target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/mdnekbopjnnjdhelbammgngakefjpjhm">official Microsoft Edge marketplace</a>.
-      </p>
-    </div>
-    <div>
-    <h3>Desktop version of PasswordZ</h3>
-    <p class="text-muted small">Graphical UI version, no command line needed; identical algorithm to the online and CLI versions.</p>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">OS</th>
-            <th scope="col">File Link</th>
-            <th scope="col">MD5</th>
-          </tr>
-        </thead>
-        <tbody id="desktop-table"></tbody>
-      </table>
-      <p class="text-muted small">Windows: extract and double-click <code>passwordz-desktop.exe</code> (a SmartScreen prompt may appear on first run — choose "Run anyway"); Linux: extract then run <code>chmod +x passwordz-desktop &amp;&amp; ./passwordz-desktop</code>; the macOS build must be produced on a Mac and will be provided in a later release.</p>
-    </div>
-    <div>
-    <h3>Offline command-line version of PasswordZ</h3>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">OS</th>
-            <th scope="col">File Link</th>
-            <th scope="col">MD5</th>
-          </tr>
-        </thead>
-        <tbody id="download-table"></tbody>
-      </table>
-      <div id="history"></div>
-      <p class="text-muted small">Note: v1.1.0 fixes a punctuation-fallback defect, so it differs from v1.0.0 in about 2.55% of all-charset (digit + lower + upper + punctuation) scenarios — please verify the affected passwords before rolling back to an older version.</p>
-    </div>
+    <section class="pz-card">
+        <span class="pz-section-tag">Extension</span>
+        <h3>Browser extension</h3>
+        <p>If you're using Microsoft Edge, get the PasswordZ extension directly from the <a target="_blank" href="https://microsoftedge.microsoft.com/addons/detail/mdnekbopjnnjdhelbammgngakefjpjhm">official Edge marketplace</a>.</p>
+    </section>
 
-    <div class="my-3 pt-3 text-muted text-small">
-        <h5>Windows Installation instructions</h5>
-        <a data-file="windows" href="download/">Download</a> and decompression, go to the directory where the program is located (if you set the PATH variables, you can arbitrary the directory), ctrl+right-click to open the PowerShell window here, and then enter the following command to use PasswordZ:
-        <pre>
-            <code>
-./passwordz.exe
-            </code>
-        </pre>
+    <section class="pz-card">
+        <span class="pz-section-tag">Desktop</span>
+        <h3>Desktop version</h3>
+        <p class="text-muted small">Graphical UI — no command line needed, ~4 MB; identical algorithm to the online and CLI versions.</p>
+        <table class="table">
+            <thead><tr><th scope="col">OS</th><th scope="col">Download</th><th scope="col">MD5</th></tr></thead>
+            <tbody id="desktop-table"></tbody>
+        </table>
+        <p class="text-muted small mt-2">Windows: extract and double-click <code>passwordz-desktop.exe</code> (a SmartScreen prompt may appear on first run — choose "Run anyway"); Linux: extract then run <code>chmod +x passwordz-desktop &amp;&amp; ./passwordz-desktop</code>; the macOS build must be produced on a Mac and will arrive in a later release.</p>
+    </section>
 
-        <h5>MacOS Installation instructions</h5>
-        <a data-file="darwin" href="download/">Download</a> and decompression,Use the command line to go to the directory where the program is located (put passwordz in the $PATH directory to get anywhere on the command line), and type the <samp>passwordz</samp> command to use PasswordZ.If it pops up: "passwordz" cannot be opened because the developer cannot be verified. Click Cancel, then go to System Preferences -> Security & Privacy -> General -> in the Running apps downloaded from: The use of "passwordz" has been blocked because it comes from an unidentified developer area. Click Still Running and that's it.
-        <pre>
-            <code data-curl="darwin">
-            </code>
-        </pre>
-        <h5>Linux Installation instructions</h5>
-        <a data-file="linux" href="download/">Download</a> and decompression,Use the command line to go to the directory where the program is located (put passwordz in the $PATH directory to get anywhere on the command line), and type the <samp>passwordz</samp> command to use PasswordZ.
-            <pre>
-                <code data-curl="linux">
-                </code>
-            </pre>
-        <h5>Android Installation instructions</h5>
-        Note that this program is a command-line program, you need to use the command line or Termux, open the terminal，<a data-file="android" href="download/">download</a> and decompression,Use the command line to go to the directory where the program is located (put passwordz in the $PATH directory to get anywhere on the command line), and type the <samp>passwordz</samp> command to use PasswordZ.
-        <pre>
-            <code data-curl="android">
-            </code>
-        </pre>
-    </div>
-    <div class="my-3 pt-3 text-muted text-small">
-        <h5>Example of a PasswordZ command-line interaction</h5>
-        <pre>
-            <code>
-➜  ~ passwordz
+    <section class="pz-card">
+        <span class="pz-section-tag">CLI</span>
+        <h3>Offline command-line version</h3>
+        <p class="text-muted small">Single-file command-line program, ~700 KB; identical algorithm to the online and desktop versions.</p>
+        <table class="table">
+            <thead><tr><th scope="col">OS</th><th scope="col">Download</th><th scope="col">MD5</th></tr></thead>
+            <tbody id="download-table"></tbody>
+        </table>
+        <div id="history" class="pz-history"></div>
+        <p class="text-muted small mt-2">Note: v1.1.0 fixes a punctuation-fallback defect, so it differs from v1.0.0 in about 2.55% of all-charset (digit + lower + upper + punctuation) scenarios — please verify the affected passwords before rolling back.</p>
+    </section>
+
+    <section class="pz-card">
+        <span class="pz-section-tag">Install</span>
+        <h3>Installation by platform</h3>
+        <h5 class="pz-feature-title">Windows</h5>
+        <p class="text-muted small"><a data-file="windows" href="../download/">Download</a> and extract, then enter the program's directory (add it to <code>PATH</code> to run from anywhere). Ctrl + right-click → "Open PowerShell here", then run:</p>
+        <pre class="pz-pre"><code>./passwordz.exe</code></pre>
+
+        <h5 class="pz-feature-title">macOS</h5>
+        <p class="text-muted small"><a data-file="darwin" href="../download/">Download</a> and extract, then <samp>cd</samp> into the program's directory (add it to <code>PATH</code> to run from anywhere) and run <samp>passwordz</samp>. If macOS says it "can't be opened because it is from an unidentified developer": cancel, then go to System Settings → Privacy & Security → click "Open Anyway".</p>
+        <pre class="pz-pre"><code data-curl="darwin"></code></pre>
+
+        <h5 class="pz-feature-title">Linux</h5>
+        <p class="text-muted small"><a data-file="linux" href="../download/">Download</a> and extract, then <samp>cd</samp> into the program's directory (add it to <code>PATH</code> to run from anywhere) and run <samp>passwordz</samp>.</p>
+        <pre class="pz-pre"><code data-curl="linux"></code></pre>
+
+        <h5 class="pz-feature-title">Android</h5>
+        <p class="text-muted small">This is a command-line program and needs a terminal or Termux. <a data-file="android" href="../download/">Download</a> and extract, enter the program's directory (add it to <code>PATH</code> to run from anywhere) and run <samp>passwordz</samp>.</p>
+        <pre class="pz-pre"><code data-curl="android"></code></pre>
+    </section>
+
+    <section class="pz-card">
+        <span class="pz-section-tag">Demo</span>
+        <h3>Command-line interaction example</h3>
+        <pre class="pz-pre"><code>➜  ~ passwordz
 密之v<span data-version></span> © http://mi.zhitianxia.com
 请输入原始密码(origin password):******
 请输入场景代码(scene code): icbc
@@ -105,23 +90,21 @@ p:符号(punctuation)
 ==============
 请输入包含的字符代号，比如包含字母数字[dul]，直接回车使用默认值[dulp]: d
 您选择了(selected):数字(digit) 生成的分发密码为:
-8024153261987848
-            </code>
-        </pre>
-    </div>
+8024153261987848</code></pre>
+    </section>
 
-    <footer class="my-5 pt-5 text-muted text-center text-small">
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="download.html">简体中文</a></li>
-        <li class="list-inline-item">English</li>
-    </ul>
-        <p class="mb-1"><a href="en/about.html">About PasswordZ</a> &copy; 2023-2024 <a class="link-secondary" href="http://mi.zhitianxia.com/en/">密之天下·PasswordZ</a> <a class="link-secondary" href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a></p>
+    <footer class="my-4 pt-3 text-center pz-footer">
+        <ul class="list-inline pz-lang">
+            <li class="list-inline-item"><a href="../download.html">简体中文</a></li>
+            <li class="list-inline-item active">English</li>
+        </ul>
+        <p class="mb-1"><a href="about.html">About PasswordZ</a> &copy; 2023-2026 <a href="http://mi.zhitianxia.com/">密之天下·PasswordZ</a> <a href="https://beian.miit.gov.cn/">浙ICP备15019268号-1</a> · <a href="http://www.fangmou.com">方谋</a></p>
     </footer>
 </div>
 
 <noscript><p class="text-center text-danger">The download list requires JavaScript to display.</p></noscript>
 
-<script type="text/javascript" src="js/downloads.js"></script>
+<script type="text/javascript" src="../js/downloads.js"></script>
 <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
