@@ -1,0 +1,9 @@
+{
+  "name": "passwordz-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "密之 PasswordZ 在线版静态站。本文件仅为提供 `npm test` 入口，运行算法黄金向量测试，无任何运行时依赖。",
+  "scripts": {
+    "test": "node --test"
+  }
+}
